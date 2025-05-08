@@ -21,7 +21,7 @@ body {
 
 /* Imagem responsiva */
 .img img {
-    max-width: 200%;
+    max-width: 300px;
     height: auto;
 }
 
