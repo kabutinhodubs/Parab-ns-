@@ -21,13 +21,13 @@ body {
 
 /* Imagem responsiva */
 .img img {
-    max-width: 100%;
+    max-width: 200%;
     height: auto;
 }
 
 /* Título responsivo */
 .titulo h1 {
-    font-size: 3em;
+    font-size: 50em;
     margin-top: 20px;
 }
 
