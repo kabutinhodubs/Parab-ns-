@@ -1,25 +1,36 @@
-/* inicio.css */
-
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
+    background-color: #000000;
 }
 
-/* Imagem responsiva */
+img{
+    width: 220px;
+    height: 380px;
+    margin-left: 115px;
+    animation: img 15s infinite;
+}
+
+@keyframes  img{
+    0% {opacity: 1; }
+    50% {opacity: 0; }
+    100% {opacity: 1;}
+}
+
+@keyframes piscar {
+  0% { opacity: 1; color: red; }
+  50% { opacity: 0; color: white; }
+  100% { opacity: 1; color: white; }
+}
+
+h1 {
+  animation: piscar 1s infinite;
+  margin-left: 119px;
+}
+
+h1 a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Faz o link herdar a cor do elemento pai */
+}
+
 .img img {
     max-width: 300px;
     height: auto;
@@ -31,19 +42,10 @@ body {
     margin-top: 20px;
 }
 
-.titulo a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
-}
-
-.titulo a:hover {
-    color: #007BFF;
-}
-
 /* Media Query para telas menores */
 @media (max-width: 600px) {
     .titulo h1 {
         font-size: 50px;
     }
 }
+
