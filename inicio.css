@@ -1,50 +1,49 @@
+/* inicio.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #000000;
-    display: flex; /* Corrigido de 'display-flax' */
-    flex-direction: column; /* Corrigido de 'colun' */
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-}
-
-img {
-    width: 220px;
-    height: 380px;
-    animation: img 15s infinite;
-}
-
-@keyframes img {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes piscar {
-    0% { opacity: 1; color: red; }
-    50% { opacity: 0; color: white; }
-    100% { opacity: 1; color: white; }
-}
-
-h1 {
-    animation: piscar 1s infinite;
+    padding: 20px;
     text-align: center;
-    margin: 10px 0;
 }
 
-h1 a {
+/* Imagem responsiva */
+.img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Título responsivo */
+.titulo h1 {
+    font-size: 3em;
+    margin-top: 20px;
+}
+
+.titulo a {
     text-decoration: none;
-    color: inherit;
+    color: #333;
+    transition: color 0.3s;
 }
 
-/* Responsividade corrigida */
-@media screen and (max-width: 768px) {
-    img {
-        width: 60%;
-        height: auto;
-    }
+.titulo a:hover {
+    color: #007BFF;
+}
 
-    h1 {
-        font-size: 1.5rem;
+/* Media Query para telas menores */
+@media (max-width: 600px) {
+    .titulo h1 {
+        font-size: 2em;
     }
 }
