@@ -1,42 +1,50 @@
 body {
     background-color: #000000;
+    display: flex; /* Corrigido de 'display-flax' */
+    flex-direction: column; /* Corrigido de 'colun' */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
-img{
+img {
     width: 220px;
     height: 380px;
-    margin-left: 115px;
     animation: img 15s infinite;
 }
 
-@keyframes  img{
-    0% {opacity: 1; }
-    50% {opacity: 0; }
-    100% {opacity: 1;}
+@keyframes img {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @keyframes piscar {
-  0% { opacity: 1; color: red; }
-  50% { opacity: 0; color: white; }
-  100% { opacity: 1; color: white; }
+    0% { opacity: 1; color: red; }
+    50% { opacity: 0; color: white; }
+    100% { opacity: 1; color: white; }
 }
 
 h1 {
-  animation: piscar 1s infinite;
-  margin-left: 119px;
+    animation: piscar 1s infinite;
+    text-align: center;
+    margin: 10px 0;
 }
 
 h1 a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: inherit; /* Faz o link herdar a cor do elemento pai */
+    text-decoration: none;
+    color: inherit;
 }
 
-@media screen and(max-width: 768px){
-    .colaborador img{
-        width: 30%;
+/* Responsividade corrigida */
+@media screen and (max-width: 768px) {
+    img {
+        width: 60%;
+        height: auto;
     }
-    
-    .colaborador h1{
-        width: 30%;
+
+    h1 {
+        font-size: 1.5rem;
     }
 }
